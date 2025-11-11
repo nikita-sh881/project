@@ -204,6 +204,25 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
+        .skip-link{
+            position: absolute;
+            inset-inline-start: 1rem;
+            inset-block-start: -100%;
+            z-index: 10000;
+            padding: .5rem .75rem;
+            background: #111;
+            color: #fff;
+            border-radius: .5rem;
+            text-decoration: none;
+        }
+        .skip-link:focus,
+        .skip-link:focus-visible { inset-block-start: 1rem; }
+        :focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+        a, button, input, textarea { outline-offset: 2px; }
+        @media (pointer: coarse){
+            a, button, .nav_link { min-height: 44px; padding: .75rem 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -293,6 +312,7 @@
         </footer>
     </div>
 </body>
-
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 </html>
+
 
