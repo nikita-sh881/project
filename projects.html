@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Портфолио студента</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .student-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            padding: 15px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #4CAF50;
+        }
+
+        .nav-menu a.active {
+            color: #4CAF50;
+        }
+
+        .projects-content {
+            padding: 40px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .projects-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .filter-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .filter-btn.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-tech {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            background-color: #f9f9f9;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">Л</div>
+            <div class="student-name">Имя Студента</div>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="projects.html" class="active">Проекты</a></li>
+                <li><a href="diary.html">Дневник</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="projects-content">
+            <h1 class="section-title">Мои проекты</h1>
+            
+            <div class="projects-filters">
+                <button class="filter-btn active">Все</button>
+                <button class="filter-btn">HTML</button>
+                <button class="filter-btn">JS</button>
+                <button class="filter-btn">React</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">Личный сайт</div>
+                    <div class="project-tech">HTML, CSS</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Todo-приложение</div>
+                    <div class="project-tech">JavaScript</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Интернет-магазин</div>
+                    <div class="project-tech">React</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Портфолио</div>
+                    <div class="project-tech">Bootstrap</div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <span>© 2025</span>
+                <span>Контакты</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
