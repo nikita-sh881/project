@@ -179,7 +179,25 @@
             color: #666;
         }
 
-        .projects-section {
+        .projects-preview { margin-block: var(--space-2xl, 3rem); }
+        .projects-preview__grid{
+            display: grid; /* включаем CSS Grid */
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            gap: var(--space-lg, 1.5rem); /* промежутки между колонками/строками */
+        }
+        .project-card{
+            background: #fff;
+            border-radius: .75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 /
+                                                                            0.1);
+            transition: transform .2s ease, box-shadow .2s ease;
+            min-width: 0; /* разрешаем контенту ужиматься */
+        }
+        .project-card:hover{ transform: translateY(-4px); }
+        .project-card__title,
+        .project-card__description { overflow-wrap: anywhere; }
+        
+        /*.projects-section {
             padding: 40px 20px;
             border-bottom: 2px solid #ddd;
         }
@@ -202,7 +220,7 @@
             color: #665;
             font-weight: bold;
             transition: transform 0.3s, background-color 0.3s;
-        }
+        }*/
 
         .footer {
             padding: 20px;
@@ -319,10 +337,10 @@
 
         <section class="projects-section">
             <h2 class="section-title">Лучшие проекты</h2>
-            <div class="projects-container">
-                <div class="project">П1</div>
-                <div class="project">П2</div>
-                <div class="project">П3</div>
+            <div class="projects-preview__grid">
+                <div class="project-card">П1</div>
+                <div class="project-card">П2</div>
+                <div class="project-card">П3</div>
             </div>
         </section>
 
@@ -336,6 +354,7 @@
 </body>
     <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 </html>
+
 
 
 
