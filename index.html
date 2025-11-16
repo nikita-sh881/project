@@ -193,16 +193,20 @@
             transition: transform .2s ease, box-shadow .2s ease;
             min-width: 0; /* разрешаем контенту ужиматься */
         }
+
+        
         .project-card:hover{ transform: translateY(-4px); }
         .project-card__title,
         .project-card__description { overflow-wrap: anywhere; }
+
+        project-card__title{ font-size: clamp(1rem, 0.875rem + 2cqi, 1.5rem); }
         
-        /*.projects-section {
+        .projects-section {
             padding: 40px 20px;
             border-bottom: 2px solid #ddd;
         }
 
-        .projects-container {
+        /*.projects-container {
             display: flex;
             justify-content: center;
             gap: 30px;
@@ -338,9 +342,15 @@
         <section class="projects-section">
             <h2 class="section-title">Лучшие проекты</h2>
             <div class="projects-preview__grid">
-                <div class="project-card">П1</div>
-                <div class="project-card">П2</div>
-                <div class="project-card">П3</div>
+                <div class="project-card">
+                    <p class ="project-card__title">П1</p> 
+                </div>
+                <div class="project-card">
+                    <p class ="project-card__title">П1</p> 
+                </div>
+                <div class="project-card">
+                    <p class ="project-card__title">П1</p> 
+                </div>
             </div>
         </section>
 
@@ -354,6 +364,7 @@
 </body>
     <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 </html>
+
 
 
 
