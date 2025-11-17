@@ -50,10 +50,24 @@
             font-weight: bold;
         }
 
-        .nav {
+        .nav{
+            position: sticky;
+            top: 0;
+            padding-block-start: calc(.75rem + env(safe-area-inset-top));
+            padding-block-end: .75rem;
+            padding-inline-start: calc(var(--space-md, 1rem) + env(safe-area-inset-left));
+            padding-inline-end: calc(var(--space-md, 1rem) + env(safe-area-inset-right));
+            background: #2563eb;
+            color: #fff;
+            z-index: 100;
+            isolation: isolate;
+            box-shadow: 0 1px 3px rgba(0,0,0,.1);
+        }
+        
+         /*.nav {
             padding: 15px 20px;
             border-bottom: 2px solid #ddd;
-        }
+        }*/
 
         .nav-menu {
             list-style: none;
@@ -71,7 +85,7 @@
         .nav-menu a.active {
             color: #4CAF50;
         }
-
+        
         .diary-content {
             padding: 40px 20px;
             border-bottom: 2px solid #ddd;
@@ -274,5 +288,6 @@
 </body>
     <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 </html>
+
 
 
