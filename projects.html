@@ -59,9 +59,11 @@
         .nav{
             position: sticky;
             top: 0;
-            padding-block-start: max(
+            /*padding-block-start: max(
                 .75rem, env(safe-area-inset-top)
-            );
+            );*/
+            padding-block-start: .75rem;
+            padding-top: env(safe-area-inset-top);
             padding-block-end: .75rem;
             padding-inline-start: max(
                 var(--space-md, 1rem), env(safe-area-inset-left)
@@ -243,6 +245,7 @@
     </div>
 </body>
 </html>
+
 
 
 
